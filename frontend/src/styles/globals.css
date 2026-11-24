@@ -1,0 +1,10 @@
+@import '../index.css';
+
+/* FormFlow Design System Utilities */
+.card-hover {
+  @apply transition-all duration-200 hover:border-zinc-300 hover:shadow-sm;
+}
+
+.button-press {
+  @apply active:scale-[0.98] transition-transform duration-100;
+}

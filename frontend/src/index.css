@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ff-bg: #FAF6EF;
+    --ff-surface: #FFFDF9;
+    --ff-sidebar: #06392B;
+    --ff-border: #E8DFC8;
+    --ff-text: #202720;
+    --ff-subtext: #77776E;
+    --ff-emerald: #064E3B;
+    --ff-forest: #0B3D2E;
+    --ff-mint: #BDE9D4;
+    --ff-teal: #65BFAF;
+  }
+
+  body {
+    background-color: #FAF6EF;
+    color: #202720;
+    font-family: 'Plus Jakarta Sans', Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom subtle scrollbars in editorial style */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(11, 61, 46, 0.15);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(11, 61, 46, 0.3);
+}
+
+/* Editorial Markdown rendering */
+.chat-markdown {
+  @apply text-[14px] leading-relaxed text-[#202720];
+}
+
+.chat-markdown p {
+  @apply mb-2.5 last:mb-0;
+}
+
+.chat-markdown h1, 
+.chat-markdown h2, 
+.chat-markdown h3 {
+  @apply font-serif font-semibold text-[#0B3D2E] mt-3.5 mb-1.5 first:mt-0;
+}
+
+.chat-markdown ul, 
+.chat-markdown ol {
+  @apply pl-4 mb-2.5 space-y-1;
+}
+
+.chat-markdown ul {
+  @apply list-disc;
+}
+
+.chat-markdown ol {
+  @apply list-decimal;
+}
+
+.chat-markdown code {
+  @apply font-mono text-xs bg-[#F6EFE4] text-[#064E3B] px-1.5 py-0.5 rounded border border-[#E8DFC8];
+}
+
+.chat-markdown pre {
+  @apply bg-[#04271D] text-[#E2F5ED] p-3 rounded-xl overflow-x-auto my-2.5 text-xs font-mono;
+}
+
+.chat-markdown pre code {
+  @apply bg-transparent text-[#E2F5ED] p-0 border-0;
+}
+
+.chat-markdown blockquote {
+  @apply border-l-2 border-[#087F5B] pl-3 italic text-[#77776E] my-2;
+}
+
+.chat-markdown table {
+  @apply w-full text-xs text-left border-collapse my-2.5 border border-[#E8DFC8] rounded-xl overflow-hidden;
+}
+
+.chat-markdown th {
+  @apply bg-[#F6EFE4] font-semibold p-2 border-b border-[#E8DFC8] text-[#0B3D2E];
+}
+
+.chat-markdown td {
+  @apply p-2 border-b border-[#F6EFE4] text-[#202720];
+}

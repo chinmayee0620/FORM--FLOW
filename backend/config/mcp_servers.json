@@ -1,0 +1,58 @@
+{
+  "servers": [
+    {
+      "server_id": "google-drive",
+      "name": "Official Google Drive MCP Server",
+      "description": "Real Google Drive MCP server with metadata search, document export, and on-demand privacy reading.",
+      "transport": "in_memory",
+      "adapter_class": "mcp_servers.google_drive_server.server.GoogleDriveMCPServerAdapter",
+      "enabled": true,
+      "is_mock": false
+    },
+    {
+      "server_id": "document-vault",
+      "name": "Google Drive Document Vault MCP",
+      "description": "Zero-duplicate document indexing and retrieval for user-authorized Google Drive folders.",
+      "transport": "in_memory",
+      "adapter_class": "app.mcp.servers.document_vault.DocumentVaultMCPServer",
+      "enabled": true,
+      "is_mock": false
+    },
+    {
+      "server_id": "form-analysis",
+      "name": "Form & Portal Requirements MCP",
+      "description": "Parses live portal criteria, input fields, and application eligibility rules.",
+      "transport": "in_memory",
+      "adapter_class": "app.mcp.servers.form_analysis.FormAnalysisMCPServer",
+      "enabled": true,
+      "is_mock": false
+    },
+    {
+      "server_id": "data-verification",
+      "name": "Cross-Document Verification MCP",
+      "description": "Detects name spelling differences, date discrepancies, and eligibility qualification gaps.",
+      "transport": "in_memory",
+      "adapter_class": "app.mcp.servers.verification.VerificationMCPServer",
+      "enabled": true,
+      "is_mock": false
+    },
+    {
+      "server_id": "form-automation",
+      "name": "Assisted Form Filler & Safety MCP",
+      "description": "Pre-populates verified credentials and enforces mandatory Human Approval checkpoints.",
+      "transport": "in_memory",
+      "adapter_class": "app.mcp.servers.automation.FormAutomationMCPServer",
+      "enabled": true,
+      "is_mock": false
+    },
+    {
+      "server_id": "test-echo-mcp",
+      "name": "Test Diagnostics & Echo MCP",
+      "description": "Harmless mock development MCP server for verifying tool discovery and dynamic execution.",
+      "transport": "in_memory",
+      "adapter_class": "app.mcp.servers.test_server.TestMCPServer",
+      "enabled": true,
+      "is_mock": true
+    }
+  ]
+}
